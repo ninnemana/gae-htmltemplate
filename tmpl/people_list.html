@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>People</title>
+		<link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css">
+	</head>
+	<body>
+		<div class="navbar">
+			<div class="navbar-inner">
+				<div class="container">
+					<a class="brand" href="/">Go Twitter Mock</a>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div class="row-fluid">
+				<div class="span1">
+					<ul class="nav nav-list">
+						<li class="nav-header">
+							Menu
+						</li>
+						<li>
+							<a href="/" title="Home">
+								<i class="icon-home"></i>
+								Home
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="span11">
+					<h2>People in System</h2>
+					{{with .}}
+						{{range .}}
+							<p>{{.First}} {{.Last}}</p>
+						{{end}}
+					{{end}}			
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Add Person</title>
+		<link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css">
+	</head>
+	<body>
+		<div class="navbar">
+			<div class="navbar-inner">
+				<div class="container">
+					<a class="brand" href="/">Go Twitter Mock</a>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div class="row-fluid">
+				<div class="span1">
+					<ul class="nav nav-list">
+						<li class="nav-header">
+							Menu
+						</li>
+						<li>
+							<a href="/" title="Home">
+								<i class="icon-home"></i>
+								Home
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="span11">
+					<form method="get" action="/add_person" class="form-horizontal">
+						<fieldset>
+							<label for="first">
+								First Name
+								<input type="text" name="first" id="first" placeholder="Enter your first name" value="{{.First}}" />
+							</label>
+
+							<label for="last">
+								Last Name
+								<input type="text" name="last" id="last" placeholder="Enter your last name" value="{{.Last}}" />
+							</label>
+						</fieldset>
+						<div class="well">
+							<input type="submit" name="save" id="btnSave" value="Add" class="btn btn-success" />
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
